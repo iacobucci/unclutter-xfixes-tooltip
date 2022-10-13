@@ -1,38 +1,11 @@
-[![Issues](https://img.shields.io/github/issues/Airblader/unclutter-xfixes.svg)](https://github.com/Airblader/unclutter-xfixes/issues)
-[![Forks](https://img.shields.io/github/forks/Airblader/unclutter-xfixes.svg)](https://github.com/Airblader/unclutter-xfixes/network)
-[![Stars](https://img.shields.io/github/stars/Airblader/unclutter-xfixes.svg)](https://github.com/Airblader/unclutter-xfixes/stargazers)
-
-# unclutter-xfixes
+# unclutter-xfixes-tooltip
 
 ## About
 
-This is a rewrite of the popular tool unclutter, but using the x11-xfixes extension. This means that this rewrite doesn't use fake windows or pointer grabbing and hence causes less problems with window managers and/or applications.
+I have quickly patched [unclutter](https://github.com/Airblader/unclutter-xfixes) for it to have the mouse pointer move away from where it's left off and lessen the [annoyance](https://unix.stackexchange.com/questions/697055/run-a-script-when-mouse-is-idle) of pop-ups and highlights, like [wikipedia's](https://www.mediawiki.org/wiki/Reference_Tooltips).\
+You can use the `--new-coordinates <x,y>` option to specify where the pointer will be moved. If the option is not passed to the program, the pointer won't be moved.
 
 ## Installation
-
-### Arch / Manjaro
-
-```
-pacman -S unclutter
-```
-
-unclutter-xfixes is also available in the AUR as [unclutter-xfixes-git](https://aur.archlinux.org/packages/unclutter-xfixes-git/).
-
-### Debian / Ubuntu
-
-```
-apt install unclutter-xfixes
-```
-
-### Fedora
-
-```
-dnf install unclutter-xfixes
-```
-
-### FreeBSD
-
-unclutter-xfixes is available in the FreeBSD Ports Collection as [misc/unclutter-xfixes](https://www.freshports.org/misc/unclutter-xfixes/).
 
 ### Manual
 
@@ -42,11 +15,12 @@ Make sure to install the missing dependencies first:
 * libX11-devel
 * libXi-devel
 * asciidoc 
+* xdotool
 
 You can then clone the git repository, compile and install it using like this:
 
 ```
-git clone https://github.com/Airblader/unclutter-xfixes
+git clone https://github.com/iacobucci/unclutter-xfixes
 cd unclutter-xfixes
 make
 sudo make install
