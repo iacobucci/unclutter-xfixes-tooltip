@@ -15,7 +15,6 @@ Make sure to install the missing dependencies first:
 * libX11-devel
 * libXi-devel
 * asciidoc 
-* xdotool
 
 You can then clone the git repository, compile and install it using like this:
 
